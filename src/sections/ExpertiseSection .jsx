@@ -36,7 +36,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-body dark:bg-darkBody flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20" id="expertise">
+    <section className="overflow-hidden min-h-screen bg-body dark:bg-darkBody flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20" id="expertise">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header Section */}
         <motion.div

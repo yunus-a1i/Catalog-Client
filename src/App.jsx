@@ -39,7 +39,7 @@ function App() {
       <HeroSection/>
       <AboutSection/>
       <ExpertiseSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <ContactSection />
       <Footer/>
     </>

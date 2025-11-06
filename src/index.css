@@ -6,8 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
-@layer utilities {
-  .clip-path-cone {
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  }
+body::-webkit-scrollbar,
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
 }

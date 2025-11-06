@@ -4,7 +4,7 @@ import { ArrowRight, Crown, Sparkles } from "lucide-react";
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-screen bg-body dark:bg-darkBody flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-x-hidden"
+      className="relative overflow-hidden min-h-screen bg-body dark:bg-darkBody flex items-center justify-center px-4 sm:px-6 lg:px-8 "
       id="home"
     >
       <div className="max-w-4xl mx-auto text-center z-10">
@@ -71,12 +71,12 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center "
         >
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="group bg-mainHeading dark:bg-darkMainHeading text-card dark:text-darkCard px-8 py-4 rounded-lg font-Manrope font-medium flex items-center gap-2 transition-all duration-300 hover:shadow-lg"
+            className="max-sm:w-full group bg-mainHeading dark:bg-darkMainHeading text-card dark:text-darkCard px-8 py-4 rounded-lg font-Manrope font-medium flex items-center max-sm:justify-center gap-2 transition-all duration-300 hover:shadow-lg"
           >
             Begin Your Search
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -85,7 +85,7 @@ const HeroSection = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="border border-border dark:border-darkBorder bg-secondary bg-white text-subHeading dark:text-darkSubHeading px-8 py-4 rounded-lg font-Manrope font-medium transition-all duration-300 hover:bg-card dark:bg-darkCard hover:shadow-lg"
+            className="max-sm:w-full border border-border dark:border-darkBorder bg-secondary bg-white text-subHeading dark:text-darkSubHeading px-8 py-4 rounded-lg font-Manrope font-medium transition-all duration-300 hover:bg-card dark:bg-darkCard hover:shadow-lg"
           >
             View Our Process
           </motion.button>
@@ -131,7 +131,7 @@ const HeroSection = () => {
       {/* Mid Layer */}
 
       {/* Accent Layer */}
-      <motion.div
+      {/* <motion.div
         className="absolute w-60 min-h-[1280px] rotate-[230deg] bg-gradient-to-b from-orange-100/70 via-red-300 to-purple-400/70 dark:from-orange-100/40 dark:via-red-300/50 dark:to-purple-400/40 -top-96 right-52 rounded-b-full z-50"
         animate={{
           opacity: [0.3, 0.6, 0.3],
@@ -146,7 +146,7 @@ const HeroSection = () => {
         style={{
           filter: "blur(80px)",
         }}
-      />
+      /> */}
       {/* </div> */}
     </section>
   );

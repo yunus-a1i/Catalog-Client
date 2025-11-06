@@ -42,7 +42,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-body dark:bg-darkBody flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20" id="testimonials">
+    <section className="overflow-hidden min-h-screen bg-body dark:bg-darkBody flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20" id="testimonials">
       <div className="max-w-4xl mx-auto w-full">
         {/* Header Section */}
         <motion.div
