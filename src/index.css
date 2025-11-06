@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Manrope:wght@200..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+@layer utilities {
+  .clip-path-cone {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+}
