@@ -49,7 +49,7 @@ const HeroSection = () => {
             initial={{ backgroundSize: "0% 40%", color: "#242424" }}
             animate={{ backgroundSize: "100% 90%", color: "#ffffff" }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="bg-gradient-to-r from-mainHeading to-mainHeading bg-no-repeat bg-center bg-[length:100%_40%]"
+            // className="bg-gradient-to-r from-mainHeading to-mainHeading bg-no-repeat bg-center bg-[length:100%_40%]"
           >
             Hiring Needs
           </motion.span>
@@ -112,8 +112,8 @@ const HeroSection = () => {
         </motion.div>
       </div>
       {/* <div className="absolute inset-0 overflow-hidden"> */}
-        {/* Base Layer */}
-        {/* <motion.div
+      {/* Base Layer */}
+      {/* <motion.div
           className="absolute w-full h-full bg-gradient-to-br from-amber-200/10 via-purple-300/15 to-pink-300/20"
           animate={{
             opacity: [0.2, 0.4, 0.2],
@@ -128,26 +128,25 @@ const HeroSection = () => {
           }}
         /> */}
 
-        {/* Mid Layer */}
-        
+      {/* Mid Layer */}
 
-        {/* Accent Layer */}
-        <motion.div
-          className="absolute w-60 min-h-[1280px] rotate-[230deg] bg-gradient-to-b from-orange-100/70 via-red-300 to-purple-400/70 dark:from-orange-100/40 dark:via-red-300/50 dark:to-purple-400/40 -top-96 right-52 rounded-b-full z-50"
-          animate={{
-            opacity: [0.3, 0.6, 0.3],
-            scale: [1, 1.01, 1],
-            rotate: [230, 235, 230],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{
-            filter: "blur(80px)",
-          }}
-        />
+      {/* Accent Layer */}
+      <motion.div
+        className="absolute w-60 min-h-[1280px] rotate-[230deg] bg-gradient-to-b from-orange-100/70 via-red-300 to-purple-400/70 dark:from-orange-100/40 dark:via-red-300/50 dark:to-purple-400/40 -top-96 right-52 rounded-b-full z-50"
+        animate={{
+          opacity: [0.3, 0.6, 0.3],
+          scale: [1, 1.01, 1],
+          rotate: [230, 235, 230],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{
+          filter: "blur(80px)",
+        }}
+      />
       {/* </div> */}
     </section>
   );
