@@ -8,25 +8,39 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Hayli is an incredibly talented recruiter. I worked with her at BrightHire and the highest compliment I can pay is that every candidate adored her and in fact she was among the biggest reasons they joined our organization.",
-      author: "Benjamin S.",
-      position: "CEO/Co-Founder, BrightHire",
+      quote: "Hayli is a joy to work with. She asks questions until she truly understands the role and what her client is looking for in a candidate. She’ll provide gentle coaching if she thinks a particular aspect of a hiring process is likely to yield less-than-favorable results, and her advice is usually spot-on, based on her years of recruiting experience.",
+      author: "Kelsey F.",
+      position: "CMO, Point One Navigation",
       rating: 5
     },
     {
       id: 2,
-      quote: "Exceptional partnership and outstanding results. Hayli's approach to talent acquisition transformed our hiring process and delivered top-tier candidates consistently.",
-      author: "Sarah M.",
-      position: "CTO, TechStart Inc.",
+      quote: "Hayli is passionate about all things recruiting and the candidate experience she provides is simply the best.",
+      author: "Venkat J.",
+      position: "Software Engineering Leader",
       rating: 5
     },
     {
       id: 3,
-      quote: "Working with Hayli was a game-changer for our scaling efforts. Her ability to understand our culture and find perfect matches was remarkable.",
-      author: "Jennifer L.",
-      position: "VP Engineering, GrowthLab",
+      quote: "Hayli is a no nonsense, exceptional recruiter.  Working with our engineering leaders can provide some challenge in understanding what they need in their teams, and Hayli helped them gain clarity as she found top talent.  Looking forward to working with her again.",
+      author: "Claudia R.",
+      position: "Chief People Officer",
       rating: 5
-    }
+    },
+    {
+      id: 4,
+      quote: "What impressed me most about Hayli was her ability to truly understand both sides of the equation…This wasn’t just about matching a resume to a job description – Hayli saw the strategic fit before I did.",
+      author: "Scott B.",
+      position: "VP, Business Development",
+      rating: 5
+    },
+    {
+      id: 5,
+      quote: "I’ve worked with Hayli at multiple companies and she’s always highly personable and efficient. She quickly grasps requirements and can seek out and present matching talent. She can flex to work with changing requirements and timelines with a smile.",
+      author: "Becky H.",
+      position: "COO & CoFounder @ OLarry",
+      rating: 5
+    },
   ];
 
   const nextTestimonial = () => {
