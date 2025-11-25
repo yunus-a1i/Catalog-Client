@@ -1,47 +1,43 @@
-import { useEffect, useState } from "react";
-import AboutSection from "./sections/AboutSection";
+import { BrowserRouter, Route, Routes } from "react-router";
+import OAuthCallback from "./auth/oauthCallback";
+import LoginPage from "./features/LoginPage";
+import RegisterPage from "./features/RegisterPage";
 import ContactSection from "./sections/ContactSection";
-import ExpertiseSection from "./sections/ExpertiseSection ";
-import Header from "./sections/Header";
-import HeroSection from "./sections/HeroSection";
-import TestimonialSection from "./sections/TestimonialSection";
+import CraftsmanshipSection from "./sections/CraftsmanshipSection";
 import Footer from "./sections/Footer";
+import Header from "./sections/Header";
+import Hero from "./sections/Hero";
+import TestimonialsSection from "./sections/TestimonialsSection";
+import TopProductsSection from "./sections/TopProductsSections";
 
 function App() {
-  const getSystemTheme = () =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  const [isDark, setIsDark] = useState(getSystemTheme);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDark) root.classList.add("dark");
-    else root.classList.remove("dark");
-  }, [isDark]);
-
-  // 👇 Listen for system theme changes in real time
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e) => setIsDark(e.matches);
-
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener("change", handleChange);
-      return () => mediaQuery.removeEventListener("change", handleChange);
-    } else {
-      mediaQuery.addListener(handleChange);
-      return () => mediaQuery.removeListener(handleChange);
-    }
-  }, []);
-
   return (
     <>
-      <Header/>
-      <HeroSection/>
-      <AboutSection/>
-      <ExpertiseSection />
-      <TestimonialSection />
+      {/* <Header />
+      <Hero />
+      <TopProductsSection />
+      <CraftsmanshipSection />
+      <TestimonialsSection />
       <ContactSection />
-      <Footer/>
+      <Footer /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
+
+          {/* auth */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/oauth-callback" element={<OAuthCallback />} />
+
+          {/* admin protected route example */}
+          {/* <Route path="/admin/products" element={
+            <ProtectedRoute requireAdmin={true}>
+              <AdminProductsPage />
+            </ProtectedRoute>
+          } /> */}
+        </Routes>
+    </BrowserRouter>
     </>
   );
 }

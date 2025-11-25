@@ -29,7 +29,7 @@ export default {
         darkTextContent: "#d9d9d9",
       },
       fontFamily: {
-        Cal: ["Cal Sans", "serif"],
+        GtSuper: ["GT Super", "serif"],
         Manrope: ["Manrope", "serif"],
       },
       screens: {
