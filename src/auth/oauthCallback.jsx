@@ -1,4 +1,3 @@
-// src/auth/OAuthCallback.jsx
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 import client from "../api/client";
