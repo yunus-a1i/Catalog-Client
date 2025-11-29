@@ -10,40 +10,7 @@ import {
 } from "lucide-react";
 
 const Hero = () => {
-  const catalogCategories = [
-    {
-      id: 1,
-      name: "Riding Equipment",
-      count: "245 Items",
-      image:
-        "https://images.unsplash.com/photo-1553284965-5dd8352ff1bd?w=400&h=300&fit=crop",
-      description: "Premium saddles, bridles, and riding gear",
-    },
-    {
-      id: 2,
-      name: "Stable Supplies",
-      count: "189 Items",
-      image:
-        "https://images.unsplash.com/photo-1513276031496-68e6d88129d9?w=400&h=300&fit=crop",
-      description: "Everything for stable management",
-    },
-    {
-      id: 3,
-      name: "Horse Care",
-      count: "156 Items",
-      image:
-        "https://images.unsplash.com/photo-1553284965-83b6d5e8b6d3?w=400&h=300&fit=crop",
-      description: "Grooming, health, and wellness products",
-    },
-    {
-      id: 4,
-      name: "Equestrian Apparel",
-      count: "312 Items",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      description: "Riding wear and accessories",
-    },
-  ];
+
 
   const featuredCollections = [
     {
@@ -155,65 +122,7 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* Catalog Categories */}
-      <section className="py-20 bg-card dark:bg-darkCard border-y border-border dark:border-darkBorder">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading mb-4">
-              Browse Categories
-            </h2>
-            <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
-              Explore our meticulously organized product categories to find
-              exactly what you're looking for
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {catalogCategories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <div className="rounded-2xl p-1 h-full">
-                  <div className="h-80 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 group-hover:scale-105 transition-transform duration-300" />
-                  </div>
-
-                  <div className="">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-Manrope text-xl font-semibold text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors">
-                        {category.name}
-                      </h3>
-                      <span className="font-Manrope text-sm text-textContent dark:text-darkTextContent bg-border dark:bg-darkBorder px-2 py-1 rounded-full">
-                        {category.count}
-                      </span>
-                    </div>
-
-                    <p className="font-Manrope text-textContent dark:text-darkTextContent text-sm leading-relaxed">
-                      {category.description}
-                    </p>
-
-                    <motion.div
-                      whileHover={{ x: 4 }}
-                      className="flex items-center space-x-1 text-mainHeading dark:text-darkMainHeading font-Manrope text-sm"
-                    >
-                      <span>Explore Category</span>
-                      <ChevronRight className="w-4 h-4" />
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Featured Collections */}
       {/* <section className="py-20">

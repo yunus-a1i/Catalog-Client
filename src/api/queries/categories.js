@@ -6,11 +6,16 @@ import { CATEGORIES } from '../endpoints';
 // public list
 export const fetchCategories = async () => {
   const res = await client.get(CATEGORIES.PUBLIC);
-  return res.data;
+  console.log('Fetched categories:', res.data.data);
+  return res.data.data;
 };
 
 export function useCategoriesQuery() {
-  return useQuery('categories', fetchCategories, { staleTime: 1000 * 60 * 10 });
+  return useQuery({
+    queryKey: ['categories'],
+    queryFn: fetchCategories,
+    staleTime: 1000 * 60,
+  });
 }
 
 // admin list

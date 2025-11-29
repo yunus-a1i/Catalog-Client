@@ -9,6 +9,7 @@ import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import TestimonialsSection from "./sections/TestimonialsSection";
 import TopProductsSection from "./sections/TopProductsSections";
+import CategoriesSection from "./sections/CategoriesSection";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Hero />} />
+          <Route path="/categories" element={<CategoriesSection />} />
           {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
 
           {/* auth */}
