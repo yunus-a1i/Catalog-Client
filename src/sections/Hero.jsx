@@ -10,8 +10,6 @@ import {
 } from "lucide-react";
 
 const Hero = () => {
-
-
   const featuredCollections = [
     {
       name: "Professional Series",
@@ -33,6 +31,8 @@ const Hero = () => {
   return (
     <div className="min-h-screen bg-body dark:bg-darkBody transition-colors duration-300">
       {/* Main Hero Section */}
+      <Header />
+
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-6 py-16 lg:py-24">
           <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -121,8 +121,6 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-mainHeading to-subHeading dark:from-darkMainHeading dark:to-darkSubHeading" />
         </div>
       </section>
-
-      
 
       {/* Featured Collections */}
       {/* <section className="py-20">
@@ -224,6 +222,11 @@ const Hero = () => {
           </div>
         </div>
       </section> */}
+      <TopProductsSection />
+      <CraftsmanshipSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
