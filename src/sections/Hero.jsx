@@ -29,7 +29,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-body dark:bg-darkBody transition-colors duration-300">
+    <div className="min-h-full bg-body dark:bg-darkBody transition-colors duration-300">
       {/* Main Hero Section */}
 
       <section className="relative overflow-hidden">

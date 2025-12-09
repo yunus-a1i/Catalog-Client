@@ -1,23 +1,23 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import { fetchCategories, useCategoriesQuery } from "../api/queries/categories"; // keep your existing hook/fn
+import { useCategoriesQuery } from "../api/queries/categories"; // keep your existing hook/fn
 // If fetchCategories is a react-query hook like useFetchCategories, adapt accordingly.
 
-function useDebounce(value, delay = 300) {
-  const [debounced, setDebounced] = useState(value);
-  useEffect(() => {
-    const t = setTimeout(() => setDebounced(value), delay);
-    return () => clearTimeout(t);
-  }, [value, delay]);
-  return debounced;
-}
+// function useDebounce(value, delay = 300) {
+//   const [debounced, setDebounced] = useState(value);
+//   useEffect(() => {
+//     const t = setTimeout(() => setDebounced(value), delay);
+//     return () => clearTimeout(t);
+//   }, [value, delay]);
+//   return debounced;
+// }
 
 function CategoriesSection() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const pageSize = 24;
-  const q = useDebounce(query, 300);
+  // const q = useDebounce(query, 300);
   const { data, isLoading, isError } = useCategoriesQuery();
   console.log('Categories query data:', data);
     
@@ -35,23 +35,12 @@ function CategoriesSection() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h2 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading mb-2">
+          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading mb-2 tracking-tighter">
             Browse Categories
           </h2>
           <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             Explore our meticulously organized product categories to find exactly what you're looking for
           </p>
-
-          <div className="mt-6 max-w-md mx-auto">
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => { setQuery(e.target.value); setPage(1); }}
-              placeholder="Search categories..."
-              className="w-full rounded-lg border px-4 py-2 focus:outline-none"
-              aria-label="Search categories"
-            />
-          </div>
         </motion.div>
 
         {isLoading ? (
@@ -76,7 +65,7 @@ function CategoriesSection() {
                   }}
                 >
                   <div className="rounded-2xl p-1 h-full">
-                    <div className="h-80 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden flex items-center justify-center">
+                    <div className="h-80 rounded-tl-[40px] rounded-br-[40px] bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden flex items-center justify-center">
                       {category.image_url ? (
                         <img
                           src={category.image_url}
@@ -90,14 +79,10 @@ function CategoriesSection() {
                     </div>
 
                     <div>
-                      <div className="flex items-center justify-between">
-                        <h3 className="font-Manrope text-xl font-semibold text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors">
+                        <h3 className="font-GtSuper text-6xl text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
                           {category.name}
                         </h3>
-                        <span className="font-Manrope text-sm text-textContent dark:text-darkTextContent bg-border dark:bg-darkBorder px-2 py-1 rounded-full">
-                          {typeof category.count !== "undefined" ? category.count : "—"}
-                        </span>
-                      </div>
+                        
 
                       <p className="font-Manrope text-textContent dark:text-darkTextContent text-sm leading-relaxed mt-2">
                         {category.description || "No description available."}
