@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LogIn } from "lucide-react";
+import { Link } from "react-router";
 
 function Header() {
   const [isDark, setIsDark] = useState(false);
@@ -28,10 +29,10 @@ function Header() {
 
   const navLinks =[
     {name: "Home", path: "/"},
-    {name: "Categories", path: "/"},
-    {name: "Collections", path: "/"},
-    {name: "FAQS", path: "/"},
-    {name: "Contact", path: "/"},
+    {name: "Categories", path: "/categories"},
+    {name: "Collections", path: "/collections"},
+    {name: "FAQS", path: "/faqs"},
+    {name: "Contact", path: "/contact"},
   ]
   return (
     <div>
@@ -53,14 +54,14 @@ function Header() {
             <nav className="hidden md:flex items-center space-x-8">
               {navLinks.map(
                 (item) => (
-                  <motion.a
-                    key={item}
-                    href="#"
-                    whileHover={{ scale: 1.05 }}
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    // whileHover={{ scale: 1.05 }}
                     className="font-Manrope text-subHeading dark:text-darkSubHeading hover:text-mainHeading dark:hover:text-darkMainHeading transition-colors"
                   >
                     {item.name}
-                  </motion.a>
+                  </Link>
                 )
               )}
             </nav>

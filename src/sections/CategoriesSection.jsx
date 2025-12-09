@@ -25,6 +25,7 @@ function CategoriesSection() {
   const categories = data || data?.items || data?.categories || [];
   const total = data?.total ?? data?.count ?? categories.length;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  console.log(categories[0])
 
   return (
     <section className="py-20 bg-card dark:bg-darkCard border-y border-border dark:border-darkBorder">
