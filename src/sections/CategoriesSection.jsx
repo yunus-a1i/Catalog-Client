@@ -19,13 +19,11 @@ function CategoriesSection() {
   const pageSize = 24;
   // const q = useDebounce(query, 300);
   const { data, isLoading, isError } = useCategoriesQuery();
-  console.log('Categories query data:', data);
     
   // Defensive accessors: prefer data.items or data.categories
   const categories = data || data?.items || data?.categories || [];
   const total = data?.total ?? data?.count ?? categories.length;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
-  console.log(categories[0])
 
   return (
     <section className="py-20 bg-card dark:bg-darkCard border-y border-border dark:border-darkBorder">
@@ -79,22 +77,22 @@ function CategoriesSection() {
                     </div>
 
                     <div>
-                        <h3 className="font-GtSuper text-6xl text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
+                        <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
                           {category.name}
                         </h3>
                         
 
-                      <p className="font-Manrope text-textContent dark:text-darkTextContent text-sm leading-relaxed mt-2">
+                      {/* <p className="font-Manrope text-textContent dark:text-darkTextContent text-sm leading-relaxed mt-2">
                         {category.description || "No description available."}
-                      </p>
+                      </p> */}
 
-                      <motion.div
+                      {/* <motion.div
                         whileHover={{ x: 4 }}
                         className="flex items-center space-x-1 text-mainHeading dark:text-darkMainHeading font-Manrope text-sm mt-3"
                       >
                         <span>Explore Category</span>
                         <ChevronRight className="w-4 h-4" />
-                      </motion.div>
+                      </motion.div> */}
                     </div>
                   </div>
                 </motion.div>

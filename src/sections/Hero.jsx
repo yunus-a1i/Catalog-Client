@@ -30,12 +30,10 @@ const Hero = () => {
 
   return (
     <div className="min-h-full bg-body dark:bg-darkBody transition-colors duration-300">
-      {/* Main Hero Section */}
 
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-6 py-16 lg:py-24">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Main Heading */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -46,7 +44,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="font-GtSuper text-5xl lg:text-7xl font-light text-mainHeading dark:text-darkMainHeading leading-tight"
+                className="font-GtSuper text-5xl lg:text-7xl font-light text-mainHeading dark:text-darkMainHeading leading-tight tracking-tighter"
               >
                 The Ultimate{" "}
                 <span className="italic font-serif">Equestrian</span>
@@ -66,7 +64,6 @@ const Hero = () => {
               </motion.p>
             </motion.div>
 
-            {/* Search Bar */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +84,6 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            {/* Quick Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -115,113 +111,10 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-r from-mainHeading to-subHeading dark:from-darkMainHeading dark:to-darkSubHeading" />
         </div>
       </section>
-
-      {/* Featured Collections */}
-      {/* <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading mb-4">
-              Curated Collections
-            </h2>
-            <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
-              Handpicked selections from industry experts and professional equestrians
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {featuredCollections.map((collection, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ scale: 1.03 }}
-                className="bg-gradient-to-br from-card to-body dark:from-darkCard dark:to-darkBody border border-border dark:border-darkBorder rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group"
-              >
-                <div className="space-y-4">
-                  <div className="w-12 h-12 bg-mainHeading dark:bg-darkMainHeading rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <BookOpen className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  <h3 className="font-GtSuper text-2xl text-mainHeading dark:text-darkMainHeading">
-                    {collection.name}
-                  </h3>
-                  
-                  <div className="space-y-2">
-                    <p className="font-Manrope text-textContent dark:text-darkTextContent">
-                      {collection.items}
-                    </p>
-                    <p className="font-Manrope text-sm text-subHeading dark:text-darkSubHeading">
-                      Curated by {collection.curator}
-                    </p>
-                  </div>
-                  
-                  <motion.button
-                    whileHover={{ x: 4 }}
-                    className="flex items-center space-x-2 text-mainHeading dark:text-darkMainHeading font-Manrope text-sm group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors"
-                  >
-                    <span>View Collection</span>
-                    <ChevronRight className="w-4 h-4" />
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Catalog Features */}
-      {/* <section className="py-20 bg-card dark:bg-darkCard border-y border-border dark:border-darkBorder">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            {[
-              {
-                icon: Award,
-                title: "Expert Verified",
-                description: "Every product is reviewed and verified by equestrian professionals"
-              },
-              {
-                icon: Users,
-                title: "Community Driven",
-                description: "Collections curated by top riders, trainers, and stable managers"
-              },
-              {
-                icon: Calendar,
-                title: "Regularly Updated",
-                description: "New products and brands added weekly to keep you informed"
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="text-center space-y-4"
-              >
-                <div className="w-16 h-16 bg-mainHeading dark:bg-darkMainHeading rounded-full flex items-center justify-center mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-GtSuper text-xl text-mainHeading dark:text-darkMainHeading">
-                  {feature.title}
-                </h3>
-                <p className="font-Manrope text-textContent dark:text-darkTextContent leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      
     </div>
   );
 };
