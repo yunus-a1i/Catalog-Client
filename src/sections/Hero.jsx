@@ -31,7 +31,6 @@ const Hero = () => {
   return (
     <div className="min-h-screen bg-body dark:bg-darkBody transition-colors duration-300">
       {/* Main Hero Section */}
-      <Header />
 
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-6 py-16 lg:py-24">
@@ -222,11 +221,7 @@ const Hero = () => {
           </div>
         </div>
       </section> */}
-      <TopProductsSection />
-      <CraftsmanshipSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer />
+      
     </div>
   );
 };

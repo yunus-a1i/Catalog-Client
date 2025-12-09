@@ -6,10 +6,10 @@ import ContactSection from "./sections/ContactSection";
 import CraftsmanshipSection from "./sections/CraftsmanshipSection";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
-import Hero from "./sections/Hero";
 import TestimonialsSection from "./sections/TestimonialsSection";
 import TopProductsSection from "./sections/TopProductsSections";
 import CategoriesSection from "./sections/CategoriesSection";
+import Home from "./page/Home";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <Footer /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={<Home />} />
           <Route path="/categories" element={<CategoriesSection />} />
           {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
 
