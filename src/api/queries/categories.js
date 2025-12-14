@@ -3,10 +3,10 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import client from '../client';
 import { CATEGORIES } from '../endpoints';
 
-// public list
+/* ---------- Public ---------- */
+
 export const fetchCategories = async () => {
   const res = await client.get(CATEGORIES.PUBLIC);
-  console.log('Fetched categories:', res.data.data);
   return res.data.data;
 };
 
@@ -18,36 +18,50 @@ export function useCategoriesQuery() {
   });
 }
 
-// admin list
+/* ---------- Admin ---------- */
+
 export const fetchAdminCategories = async () => {
   const res = await client.get(CATEGORIES.ADMIN);
-  return res.data;
+  return res.data.data;
 };
 
 export function useAdminCategoriesQuery() {
-  return useQuery('admin:categories', fetchAdminCategories);
+  return useQuery({
+    queryKey: ['admin', 'categories'],
+    queryFn: fetchAdminCategories,
+  });
 }
 
 export function useCreateCategory() {
   const qc = useQueryClient();
-  return useMutation(
-    (payload) => client.post(CATEGORIES.ADMIN, payload),
-    { onSuccess: () => qc.invalidateQueries('admin:categories') }
-  );
+
+  return useMutation({
+    mutationFn: (payload) => client.post(CATEGORIES.ADMIN, payload),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['admin', 'categories'] });
+    },
+  });
 }
 
 export function useUpdateCategory() {
   const qc = useQueryClient();
-  return useMutation(
-    ({ id, payload }) => client.put(CATEGORIES.ADMIN_BY_ID(id), payload),
-    { onSuccess: () => qc.invalidateQueries('admin:categories') }
-  );
+
+  return useMutation({
+    mutationFn: ({ id, payload }) =>
+      client.put(CATEGORIES.ADMIN_BY_ID(id), payload),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['admin', 'categories'] });
+    },
+  });
 }
 
 export function useDeleteCategory() {
   const qc = useQueryClient();
-  return useMutation(
-    (id) => client.delete(CATEGORIES.ADMIN_BY_ID(id)),
-    { onSuccess: () => qc.invalidateQueries('admin:categories') }
-  );
+
+  return useMutation({
+    mutationFn: (id) => client.delete(CATEGORIES.ADMIN_BY_ID(id)),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['admin', 'categories'] });
+    },
+  });
 }

@@ -6,8 +6,6 @@ import { useTopProducts } from "../api/queries/analytics";
 const TopProductsSection = () => {
   // const q = useDebounce(query, 300);
   const { data, isLoading, isError } = useTopProducts();
-  console.log(data);
-
   // Defensive accessors: prefer data.items or data.categories
   // const sampleProducts = [
   //   {

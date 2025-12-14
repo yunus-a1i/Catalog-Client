@@ -1,28 +1,29 @@
 // src/auth/useAuth.js
-import client from '../api/client';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { AUTH } from '../api/endpoints';
+import client from "../api/client";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { AUTH } from "../api/endpoints";
 
 /**
  * Token helpers (localStorage). If you switch to httpOnly cookies,
  * remove client-side storage and adjust client.js accordingly.
  */
 export function saveToken(token) {
+  console.log(token);
   if (!token) return;
-  localStorage.setItem('access_token', token);
+  localStorage.setItem("access_token", token);
 }
 
 export function getToken() {
-  return localStorage.getItem('access_token');
+  return localStorage.getItem("access_token");
 }
 
 export function clearToken() {
-  localStorage.removeItem('access_token');
+  localStorage.removeItem("access_token");
 }
 
 /**
  * Plain functions that call API (useful outside of React components)
- * - loginFn: POST /api/auth/login -> { accessToken, user, ...}
+ * - loginFn: POST /api/auth/login -> { token, user, ...}
  * - registerFn: POST /api/auth/register -> similar
  */
 export function loginFn(payload) {
@@ -42,12 +43,13 @@ export function useLoginMutation(options = {}) {
   return useMutation({
     mutationFn: (payload) => loginFn(payload),
     onSuccess: (data) => {
-      if (data?.accessToken) {
-        saveToken(data.accessToken);
+      const token = data.data.token;
+
+      if (token) {
+        saveToken(token);
       }
-      // refresh current user data
-      qc.invalidateQueries({ queryKey: ['auth', 'me'] });
-      if (options?.onSuccess) options.onSuccess(data);
+
+      qc.invalidateQueries({ queryKey: ["auth", "me"] });
     },
     onError: options?.onError,
   });
@@ -62,10 +64,10 @@ export function useRegisterMutation(options = {}) {
   return useMutation({
     mutationFn: (payload) => registerFn(payload),
     onSuccess: (data) => {
-      if (data?.accessToken) {
-        saveToken(data.accessToken);
+      if (data?.token) {
+        saveToken(data.token);
       }
-      qc.invalidateQueries({ queryKey: ['auth', 'me'] });
+      qc.invalidateQueries({ queryKey: ["auth", "me"] });
       if (options?.onSuccess) options.onSuccess(data);
     },
     onError: options?.onError,
@@ -83,7 +85,7 @@ export function fetchMe() {
 
 export function useMe(options = {}) {
   return useQuery({
-    queryKey: ['auth', 'me'],
+    queryKey: ["auth", "me"],
     queryFn: fetchMe,
     retry: false,
     staleTime: 1000 * 60 * 5, // 5 minutes
