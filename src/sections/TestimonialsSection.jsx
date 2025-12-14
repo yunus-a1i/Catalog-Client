@@ -90,7 +90,7 @@ const TestimonialsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-GtSuper text-3xl text-mainHeading dark:text-darkMainHeading mb-4">
+          <h2 className="font-GtSuper text-6xl text-mainHeading dark:text-darkMainHeading mb-4 tracking-tighter">
             Trusted by Equestrian Professionals
           </h2>
           <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent max-w-2xl mx-auto">

@@ -167,7 +167,7 @@ const Footer = () => {
                 Get the latest product updates, crafting insights, and exclusive offers.
               </p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="email"
                 placeholder="Enter your email"

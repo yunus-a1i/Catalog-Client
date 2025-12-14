@@ -58,7 +58,7 @@ function Header() {
                     key={item.name}
                     to={item.path}
                     // whileHover={{ scale: 1.05 }}
-                    className="font-Manrope text-subHeading dark:text-darkSubHeading hover:text-mainHeading dark:hover:text-darkMainHeading transition-colors"
+                    className="font-Manrope text-xl tracking-tight text-subHeading dark:text-darkSubHeading hover:text-mainHeading dark:hover:text-darkMainHeading transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -68,12 +68,12 @@ function Header() {
 
             {/* Theme Toggle & Search */}
             <div className="flex font-Manrope items-center space-x-4">
-              <button
+              {/* <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg bg-card dark:bg-darkCard border border-border dark:border-darkBorder hover:shadow-lg transition-all"
               >
                 {isDark ? "Dark" : "Light"}
-              </button>
+              </button> */}
 
               <motion.button
                 whileHover={{ scale: 1.05 }}

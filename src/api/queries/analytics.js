@@ -1,4 +1,3 @@
-// src/api/queries/analytics.js
 import { useQuery } from '@tanstack/react-query';
 import client from '../client';
 import { ANALYTICS } from '../endpoints';
