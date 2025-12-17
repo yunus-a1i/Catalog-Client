@@ -2,7 +2,7 @@
 import { Link } from "react-router";
 import { Package, FolderTree, TrendingUp, Eye } from "lucide-react";
 import { useAdminCategoriesQuery } from "../../api/queries/categories";
-import { useAdminProductsQuery } from "../../api/queries/produtcs";
+import { useAdminProductsQuery } from "../../api/queries/products";
 import { useTopProducts } from "../../api/queries/analytics";
 
 export default function Dashboard() {

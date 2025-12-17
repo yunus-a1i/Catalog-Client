@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { ArrowLeft, Upload, X, Plus } from 'lucide-react';
 import { useAdminCategoriesQuery } from '../../../api/queries/categories';
-import { useCreateProduct } from '../../../api/queries/produtcs';
+import { useCreateProduct } from '../../../api/queries/products';
 
 export default function ProductCreate() {
   const navigate = useNavigate();

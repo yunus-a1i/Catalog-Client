@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { ArrowLeft, Upload, X, Plus } from 'lucide-react';
 import client from '../../../api/client';
-import { useUpdateProduct } from '../../../api/queries/produtcs';
+import { useUpdateProduct } from '../../../api/queries/products';
 import { useAdminCategoriesQuery } from '../../../api/queries/categories';
 
 export default function ProductEdit() {

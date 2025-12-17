@@ -10,7 +10,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react';
-import { useAdminProductsQuery, useDeleteProduct } from '../../../api/queries/produtcs';
+import { useAdminProductsQuery, useDeleteProduct } from '../../../api/queries/products';
 import { useAdminCategoriesQuery } from '../../../api/queries/categories';
 
 export default function ProductList() {

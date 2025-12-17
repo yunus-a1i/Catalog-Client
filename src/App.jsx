@@ -20,6 +20,7 @@ import ProductEdit from "./page/admin/products/ProductEdit";
 import ProductCreate from "./page/admin/products/ProductCreate";
 import CategoryEdit from "./page/admin/categories/CategoryEdit";
 import CategoryCreate from "./page/admin/categories/CategoryCreate";
+import ProductDetail from "./page/products/ProductDetail";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categories" element={<CategoriesSection />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
 
           {/* auth */}
