@@ -18,6 +18,19 @@ export function useCategoriesQuery() {
   });
 }
 
+export const fetchCategoryById = async (idOrSlug) => {
+  const res = await client.get(CATEGORIES.BY_ID(idOrSlug));
+  return res.data.data;
+};
+
+export function useCategoryQuery(idOrSlug) {
+  return useQuery({
+    queryKey: ['category', idOrSlug],
+    queryFn: () => fetchCategoryById(idOrSlug),
+    enabled: !!idOrSlug,
+  });
+}
+
 /* ---------- Admin ---------- */
 
 export const fetchAdminCategories = async () => {

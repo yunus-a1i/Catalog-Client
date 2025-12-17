@@ -62,10 +62,10 @@ const CraftsmanshipSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-GtSuper text-3xl text-mainHeading dark:text-darkMainHeading mb-4">
+          <h2 className="font-GtSuper text-3xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-4">
             Excellence in Craftsmanship
           </h2>
-          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             For over three generations, we've maintained the highest standards of quality and attention to detail in every piece we create.
           </p>
         </motion.div>
@@ -84,14 +84,14 @@ const CraftsmanshipSection = () => {
               <div className="w-16 h-16 bg-mainHeading dark:bg-darkMainHeading rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-Manrope text-xl font-semibold text-mainHeading dark:text-darkMainHeading mb-3">
+              <h3 className="font-Manrope text-xl font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-3">
                 {feature.title}
               </h3>
-              <p className="font-Manrope text-textContent dark:text-darkTextContent mb-4 leading-relaxed">
+              <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent mb-4 leading-relaxed">
                 {feature.description}
               </p>
               <div className="inline-block bg-body dark:bg-darkBody border border-border dark:border-darkBorder px-3 py-1 rounded-full">
-                <span className="font-Manrope text-xs text-mainHeading dark:text-darkMainHeading font-medium">
+                <span className="font-Manrope text-xs text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading font-medium">
                   {feature.stats}
                 </span>
               </div>
@@ -107,10 +107,10 @@ const CraftsmanshipSection = () => {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
-            <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading">
+            <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
               Our Process
             </h3>
-            <p className="font-Manrope text-textContent dark:text-darkTextContent leading-relaxed">
+            <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent leading-relaxed">
               From initial consultation to final delivery, we maintain transparent communication and meticulous attention to detail at every stage of production.
             </p>
             
@@ -129,10 +129,10 @@ const CraftsmanshipSection = () => {
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading mb-1">
+                    <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-1">
                       {step.title}
                     </h4>
-                    <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent">
+                    <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                       {step.description}
                     </p>
                   </div>
@@ -161,10 +161,10 @@ const CraftsmanshipSection = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-body dark:bg-darkBody border border-border dark:border-darkBorder rounded-xl p-6 text-center hover:shadow-lg transition-all"
               >
-                <p className="font-Manrope text-3xl font-semibold text-mainHeading dark:text-darkMainHeading mb-2">
+                <p className="font-Manrope text-3xl font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2">
                   {stat.number}
                 </p>
-                <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent">
+                <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                   {stat.label}
                 </p>
               </motion.div>
@@ -179,10 +179,10 @@ const CraftsmanshipSection = () => {
           transition={{ delay: 0.6 }}
           className="text-center mt-16 pt-12 border-t border-border dark:border-darkBorder"
         >
-          <h3 className="font-GtSuper text-2xl text-mainHeading dark:text-darkMainHeading mb-4">
+          <h3 className="font-GtSuper text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-4">
             Ready to Start Your Project?
           </h3>
-          <p className="font-Manrope text-textContent dark:text-darkTextContent mb-8 max-w-xl mx-auto">
+          <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent mb-8 max-w-xl mx-auto">
             Let's discuss how we can bring your vision to life with our expert craftsmanship and attention to detail.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,7 +196,7 @@ const CraftsmanshipSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-mainHeading dark:border-darkMainHeading text-mainHeading dark:text-darkMainHeading px-8 py-3 rounded-lg font-Manrope font-semibold hover:bg-mainHeading dark:hover:bg-darkMainHeading hover:text-white transition-all"
+              className="border border-mainHeading dark:border-darkMainHeading text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading px-8 py-3 rounded-lg font-Manrope font-semibold hover:bg-mainHeading dark:hover:bg-darkMainHeading hover:text-white transition-all"
             >
               Download Brochure
             </motion.button>

@@ -45,7 +45,7 @@ function Header() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-2"
             >
-              <span className="font-GtSuper italic text-4xl font-semibold text-mainHeading dark:text-darkMainHeading">
+              <span className="font-GtSuper italic text-4xl font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                 RS
               </span>
             </motion.div>
@@ -58,7 +58,7 @@ function Header() {
                     key={item.name}
                     to={item.path}
                     // whileHover={{ scale: 1.05 }}
-                    className="font-Manrope text-xl tracking-tight text-subHeading dark:text-darkSubHeading hover:text-mainHeading dark:hover:text-darkMainHeading transition-colors"
+                    className="font-Manrope text-xl tracking-tight text-subHeading dark:text-darkSubHeading hover:text-mainHeading dark:text-darkMainHeading dark:hover:text-darkMainHeading transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -80,7 +80,7 @@ function Header() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center space-x-2 bg-card dark:bg-darkCard border border-border dark:border-darkBorder px-4 py-2 rounded-full font-Manrope hover:shadow-lg transition-all"
               >
-                <span className="text-textContent dark:text-darkTextContent">
+                <span className="text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                   Join
                 </span>
               </motion.button>

@@ -33,10 +33,10 @@ function CategoriesSection() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading mb-2 tracking-tighter">
+          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 tracking-tighter">
             Browse Categories
           </h2>
-          <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             Explore our meticulously organized product categories to find exactly what you're looking for
           </p>
         </motion.div>
@@ -77,18 +77,18 @@ function CategoriesSection() {
                     </div>
 
                     <div>
-                        <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
+                        <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
                           {category.name}
                         </h3>
                         
 
-                      {/* <p className="font-Manrope text-textContent dark:text-darkTextContent text-sm leading-relaxed mt-2">
+                      {/* <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent text-sm leading-relaxed mt-2">
                         {category.description || "No description available."}
                       </p> */}
 
                       {/* <motion.div
                         whileHover={{ x: 4 }}
-                        className="flex items-center space-x-1 text-mainHeading dark:text-darkMainHeading font-Manrope text-sm mt-3"
+                        className="flex items-center space-x-1 text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading font-Manrope text-sm mt-3"
                       >
                         <span>Explore Category</span>
                         <ChevronRight className="w-4 h-4" />
@@ -101,7 +101,7 @@ function CategoriesSection() {
 
             {/* pagination */}
             <div className="mt-8 flex items-center justify-between">
-              <div className="text-sm text-textContent">
+              <div className="text-sm text-textContent dark:text-darkTextContent">
                 Page {page} of {totalPages} — {total} total
               </div>
 

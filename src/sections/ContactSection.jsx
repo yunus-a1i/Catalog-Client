@@ -82,10 +82,10 @@ const ContactSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-GtSuper text-3xl text-mainHeading dark:text-darkMainHeading mb-4">
+          <h2 className="font-GtSuper text-3xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-4">
             Start Your Project
           </h2>
-          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             Ready to discuss your equestrian equipment needs? Let's schedule a consultation to bring your vision to life.
           </p>
         </motion.div>
@@ -98,7 +98,7 @@ const ContactSection = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading mb-6">
+              <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-6">
                 Get in Touch
               </h3>
               
@@ -116,16 +116,16 @@ const ContactSection = () => {
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading mb-1">
+                      <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-1">
                         {method.title}
                       </h4>
-                      <p className="font-Manrope text-lg text-mainHeading dark:text-darkMainHeading font-medium mb-1">
+                      <p className="font-Manrope text-lg text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading font-medium mb-1">
                         {method.details}
                       </p>
-                      <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent mb-2">
+                      <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent mb-2">
                         {method.description}
                       </p>
-                      <button className="font-Manrope text-sm text-mainHeading dark:text-darkMainHeading font-medium hover:text-subHeading dark:hover:text-darkSubHeading transition-colors">
+                      <button className="font-Manrope text-sm text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading font-medium hover:text-subHeading dark:hover:text-darkSubHeading transition-colors">
                         {method.action} →
                       </button>
                     </div>
@@ -142,8 +142,8 @@ const ContactSection = () => {
               className="bg-body dark:bg-darkBody border border-border dark:border-darkBorder rounded-xl p-6"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <Clock className="w-5 h-5 text-mainHeading dark:text-darkMainHeading" />
-                <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading">
+                <Clock className="w-5 h-5 text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading" />
+                <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                   Business Hours
                 </h4>
               </div>
@@ -154,10 +154,10 @@ const ContactSection = () => {
                   { day: "Sunday", hours: "By appointment only" }
                 ].map((schedule, index) => (
                   <div key={schedule.day} className="flex justify-between items-center">
-                    <span className="font-Manrope text-sm text-mainHeading dark:text-darkMainHeading">
+                    <span className="font-Manrope text-sm text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                       {schedule.day}
                     </span>
-                    <span className="font-Manrope text-sm text-textContent dark:text-darkTextContent">
+                    <span className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                       {schedule.hours}
                     </span>
                   </div>
@@ -190,7 +190,7 @@ const ContactSection = () => {
             animate={{ opacity: 1, x: 0 }}
             className="bg-body dark:bg-darkBody border border-border dark:border-darkBorder rounded-xl p-8"
           >
-            <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading mb-6">
+            <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-6">
               Schedule Consultation
             </h3>
 
@@ -201,10 +201,10 @@ const ContactSection = () => {
                 className="text-center py-12"
               >
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h4 className="font-Manrope text-xl text-mainHeading dark:text-darkMainHeading mb-2">
+                <h4 className="font-Manrope text-xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2">
                   Thank You!
                 </h4>
-                <p className="font-Manrope text-textContent dark:text-darkTextContent">
+                <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                   We've received your inquiry and will contact you within 24 hours.
                 </p>
               </motion.div>
@@ -212,7 +212,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading mb-2 block">
+                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 block">
                       Full Name *
                     </label>
                     <input
@@ -221,12 +221,12 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
+                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading mb-2 block">
+                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 block">
                       Email Address *
                     </label>
                     <input
@@ -235,7 +235,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
+                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
                       placeholder="your.email@company.com"
                     />
                   </div>
@@ -243,7 +243,7 @@ const ContactSection = () => {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading mb-2 block">
+                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 block">
                       Company
                     </label>
                     <input
@@ -251,12 +251,12 @@ const ContactSection = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
+                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
                       placeholder="Your company name"
                     />
                   </div>
                   <div>
-                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading mb-2 block">
+                    <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 block">
                       Phone Number
                     </label>
                     <input
@@ -264,14 +264,14 @@ const ContactSection = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
+                      className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading mb-2 block">
+                  <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 block">
                     I'm interested in *
                   </label>
                   <select
@@ -279,7 +279,7 @@ const ContactSection = () => {
                     value={formData.interest}
                     onChange={handleChange}
                     required
-                    className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
+                    className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading"
                   >
                     <option value="">Select an option</option>
                     {interests.map((interest) => (
@@ -291,7 +291,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading mb-2 block">
+                  <label className="font-Manrope text-sm font-medium text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 block">
                     Project Details *
                   </label>
                   <textarea
@@ -300,7 +300,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading resize-none"
+                    className="w-full bg-card dark:bg-darkCard border border-border dark:border-darkBorder rounded-lg px-4 py-3 font-Manrope text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading placeholder-textContent dark:placeholder-darkTextContent focus:outline-none focus:ring-2 focus:ring-mainHeading dark:focus:ring-darkMainHeading resize-none"
                     placeholder="Tell us about your project, quantities needed, timeline, and any specific requirements..."
                   />
                 </div>
@@ -315,7 +315,7 @@ const ContactSection = () => {
                   <span>Request Consultation</span>
                 </motion.button>
 
-                <p className="font-Manrope text-xs text-textContent dark:text-darkTextContent text-center">
+                <p className="font-Manrope text-xs text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent text-center">
                   By submitting this form, you agree to our privacy policy and consent to being contacted by our team.
                 </p>
               </form>

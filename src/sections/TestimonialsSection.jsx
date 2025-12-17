@@ -90,10 +90,10 @@ const TestimonialsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-GtSuper text-6xl text-mainHeading dark:text-darkMainHeading mb-4 tracking-tighter">
+          <h2 className="font-GtSuper text-6xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-4 tracking-tighter">
             Trusted by Equestrian Professionals
           </h2>
-          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             Join hundreds of satisfied clients who rely on our craftsmanship for their most demanding equestrian needs.
           </p>
         </motion.div>
@@ -106,8 +106,8 @@ const TestimonialsSection = () => {
             className="space-y-6"
           >
             <div className="flex items-center space-x-2 mb-8">
-              <Quote className="w-6 h-6 text-mainHeading dark:text-darkMainHeading" />
-              <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading">
+              <Quote className="w-6 h-6 text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading" />
+              <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                 Client Stories
               </h3>
             </div>
@@ -128,7 +128,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Content */}
-                <p className="font-Manrope text-textContent dark:text-darkTextContent mb-6 leading-relaxed italic">
+                <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent mb-6 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
 
@@ -138,21 +138,21 @@ const TestimonialsSection = () => {
                     <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-500" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading">
+                    <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                       {testimonial.name}
                     </h4>
                     <div className="flex items-center space-x-2 text-sm">
-                      <span className="font-Manrope text-textContent dark:text-darkTextContent">
+                      <span className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                         {testimonial.role}
                       </span>
                       <span className="text-border dark:text-darkBorder">•</span>
-                      <span className="font-Manrope text-textContent dark:text-darkTextContent">
+                      <span className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                         {testimonial.company}
                       </span>
                     </div>
                     <div className="flex items-center space-x-1 mt-1">
-                      <MapPin className="w-3 h-3 text-textContent dark:text-darkTextContent" />
-                      <span className="font-Manrope text-xs text-textContent dark:text-darkTextContent">
+                      <MapPin className="w-3 h-3 text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent" />
+                      <span className="font-Manrope text-xs text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                         {testimonial.location}
                       </span>
                     </div>
@@ -171,8 +171,8 @@ const TestimonialsSection = () => {
             {/* Partners */}
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <Building className="w-6 h-6 text-mainHeading dark:text-darkMainHeading" />
-                <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading">
+                <Building className="w-6 h-6 text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading" />
+                <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                   Our Partners
                 </h3>
               </div>
@@ -187,18 +187,18 @@ const TestimonialsSection = () => {
                     className="flex items-center justify-between p-4 border border-border dark:border-darkBorder rounded-lg hover:shadow-md transition-all"
                   >
                     <div>
-                      <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading">
+                      <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                         {partner.name}
                       </h4>
-                      <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent">
+                      <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                         {partner.type}
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="font-Manrope text-sm text-mainHeading dark:text-darkMainHeading font-medium">
+                      <p className="font-Manrope text-sm text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading font-medium">
                         {partner.years}
                       </p>
-                      <p className="font-Manrope text-xs text-textContent dark:text-darkTextContent">
+                      <p className="font-Manrope text-xs text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                         {partner.projects}
                       </p>
                     </div>
@@ -210,8 +210,8 @@ const TestimonialsSection = () => {
             {/* Awards */}
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <Award className="w-6 h-6 text-mainHeading dark:text-darkMainHeading" />
-                <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading">
+                <Award className="w-6 h-6 text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading" />
+                <h3 className="font-Manrope text-2xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading">
                   Recognition
                 </h3>
               </div>
@@ -227,10 +227,10 @@ const TestimonialsSection = () => {
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading mb-1">
+                        <h4 className="font-Manrope font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-1">
                           {award.name}
                         </h4>
-                        <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent">
+                        <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                           {award.organization}
                         </p>
                       </div>
@@ -269,10 +269,10 @@ const TestimonialsSection = () => {
                 whileHover={{ scale: 1.05 }}
                 className="p-4"
               >
-                <p className="font-Manrope text-3xl font-semibold text-mainHeading dark:text-darkMainHeading mb-2">
+                <p className="font-Manrope text-3xl font-semibold text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2">
                   {stat.number}
                 </p>
-                <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent">
+                <p className="font-Manrope text-sm text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent">
                   {stat.label}
                 </p>
               </motion.div>
@@ -287,7 +287,7 @@ const TestimonialsSection = () => {
           transition={{ delay: 1 }}
           className="text-center mt-12"
         >
-          <p className="font-Manrope text-textContent dark:text-darkTextContent mb-6">
+          <p className="font-Manrope text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent mb-6">
             Ready to join our community of satisfied clients?
           </p>
           <motion.button

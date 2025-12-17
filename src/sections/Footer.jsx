@@ -90,7 +90,7 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <User className="w-6 h-6 text-mainHeading" />
+                <User className="w-6 h-6 text-mainHeading dark:text-darkMainHeading" />
               </div>
               <div>
                 <h3 className="font-GtSuper text-4xl font-medium tracking-tight">Equestrian Catalog</h3>
@@ -176,7 +176,7 @@ const Footer = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-mainHeading dark:text-darkMainHeading px-6 py-3 rounded-lg font-Manrope font-semibold hover:shadow-lg transition-all"
+                className="bg-white text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading px-6 py-3 rounded-lg font-Manrope font-semibold hover:shadow-lg transition-all"
               >
                 Subscribe
               </motion.button>
