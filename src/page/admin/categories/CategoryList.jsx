@@ -21,7 +21,6 @@ export default function CategoryList() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Categories</h1>
@@ -36,7 +35,6 @@ export default function CategoryList() {
         </Link>
       </div>
 
-      {/* Categories Grid */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
         {isLoading ? (
           <div className="p-8 text-center text-gray-500">Loading categories...</div>

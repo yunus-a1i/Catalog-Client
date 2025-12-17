@@ -61,7 +61,6 @@ const TopProductsSection = () => {
   return (
     <section className="py-20 bg-body dark:bg-darkBody">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,12 +90,11 @@ const TopProductsSection = () => {
                 className="group cursor-pointer"
               >
                 <div className="relative">
-                  {/* Product Image */}
                   <div className="aspect-square rounded-tl-[40px] rounded-br-[40px] bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg">
                     {product.images?.length ? (
                       <img
-                        src={product.images[1].url}
-                        alt={product.images[0].alt || product.name}
+                        src={product.images[0]?.url}
+                        alt={product.images[0]?.alt || product.name}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -105,13 +103,11 @@ const TopProductsSection = () => {
                     )}
                   </div>
 
-                  {/* Product Info */}
                   <div className="py-2 space-y-2">
                     <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading pr-2 tracking-tighter">
                       {product.name}
                     </h3>
 
-                    {/* Optional: show views */}
                   </div>
                   {typeof product.view_count === "number" && (
                     <p className="absolute top-4 left-4 rounded-full bg-white px-4 py-2 font-Manrope text-lg text-gray-500 dark:text-gray-400">
@@ -119,12 +115,10 @@ const TopProductsSection = () => {
                     </p>
                   )}
                 </div>
-                {/* </Link> */}
               </motion.div>
             ))}
           </div>
 
-          {/* View All Button */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
