@@ -62,10 +62,10 @@ const CraftsmanshipSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-GtSuper text-3xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-4">
+          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading mb-4 tracking-tighter">
             Excellence in Craftsmanship
           </h2>
-          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             For over three generations, we've maintained the highest standards of quality and attention to detail in every piece we create.
           </p>
         </motion.div>

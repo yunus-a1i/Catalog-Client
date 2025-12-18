@@ -14,7 +14,7 @@ import { useCategoriesQuery } from "../api/queries/categories"; // keep your exi
 // }
 
 function CategoriesSection() {
-  const [query, setQuery] = useState("");
+  // const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const pageSize = 24;
   // const q = useDebounce(query, 300);
@@ -33,10 +33,10 @@ function CategoriesSection() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-2 tracking-tighter">
+          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading mb-2 tracking-tighter">
             Browse Categories
           </h2>
-          <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-xl text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             Explore our meticulously organized product categories to find exactly what you're looking for
           </p>
         </motion.div>
@@ -63,12 +63,12 @@ function CategoriesSection() {
                   }}
                 >
                   <div className="rounded-2xl p-1 h-full">
-                    <div className="h-80 rounded-tl-[40px] rounded-br-[40px] bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden flex items-center justify-center">
+                    <div className="aspect-square rounded-tl-[40px] rounded-br-[40px] bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden flex items-center justify-center">
                       {category.image_url ? (
                         <img
                           src={category.image_url}
                           alt={category.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full"
                           loading="lazy"
                         />
                       ) : (
@@ -77,7 +77,7 @@ function CategoriesSection() {
                     </div>
 
                     <div>
-                        <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
+                        <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading group-hover:text-subHeading dark:group-hover:text-darkSubHeading transition-colors tracking-tighter">
                           {category.name}
                         </h3>
                         
@@ -109,14 +109,14 @@ function CategoriesSection() {
                 <button
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page <= 1}
-                  className="px-3 py-1 rounded border disabled:opacity-50"
+                  className="px-3 py-1 rounded dark:bg-card bg-darkCard border border-border dark:border-darkBorder disabled:opacity-50 dark:text-mainHeading text-darkMainHeading"
                 >
                   Prev
                 </button>
                 <button
                   onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                   disabled={page >= totalPages}
-                  className="px-3 py-1 rounded border disabled:opacity-50"
+                  className="px-3 py-1 rounded dark:bg-card bg-darkCard border border-border dark:border-darkBorder disabled:opacity-50 dark:text-mainHeading text-darkMainHeading"
                 >
                   Next
                 </button>

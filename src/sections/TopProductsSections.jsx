@@ -17,10 +17,10 @@ const TopProductsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading mb-4 tracking-tighter">
+          <h2 className="font-GtSuper text-7xl text-mainHeading dark:text-darkMainHeading mb-4 tracking-tighter">
             Top Products
           </h2>
-          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
+          <p className="font-Manrope text-lg text-textContent dark:text-darkTextContent max-w-2xl mx-auto">
             Explore our product samples and get in touch for business inquiries
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ const TopProductsSection = () => {
                   </div>
 
                   <div className="py-2 space-y-2">
-                    <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading pr-2 tracking-tighter">
+                    <h3 className="font-GtSuper text-4xl text-mainHeading dark:text-darkMainHeading pr-2 tracking-tighter">
                       {product.name}
                     </h3>
 
@@ -80,7 +80,7 @@ const TopProductsSection = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center px-6 py-3 border border-mainHeading dark:border-darkMainHeading text-mainHeading dark:text-darkMainHeading text-mainHeading dark:text-darkMainHeading rounded-lg font-Manrope font-medium hover:bg-mainHeading dark:hover:bg-darkMainHeading hover:text-white transition-all"
+              className="inline-flex items-center px-6 py-3 border border-mainHeading dark:border-darkMainHeading text-mainHeading dark:text-darkMainHeading rounded-lg font-Manrope font-medium hover:bg-mainHeading dark:hover:bg-darkMainHeading hover:text-white transition-all"
             >
               View Complete Catalog
               <ArrowRight className="w-4 h-4 ml-2" />
