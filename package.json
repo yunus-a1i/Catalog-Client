@@ -1,7 +1,7 @@
 {
-  "name": "home-page",
+  "name": "etsy-catalog",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,17 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@material-tailwind/react": "^3.0.0-beta.24",
     "@reduxjs/toolkit": "^2.8.2",
     "@tanstack/react-query": "^5.90.10",
     "axios": "^1.10.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.19.1",
-    "jspdf": "^3.0.2",
-    "jspdf-autotable": "^5.0.2",
     "lucide-react": "^0.522.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-parallax-tilt": "^1.7.299",
     "react-redux": "^9.2.0",
     "react-router": "^7.6.2",
     "react-toastify": "^11.0.5",
