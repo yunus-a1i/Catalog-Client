@@ -9,8 +9,7 @@ export function useTopProducts() {
       const res = await client.get(ANALYTICS.TOP_PRODUCTS);
       return res.data.data;
     },
-    // optional:
-    // staleTime: 1000 * 60, // 1 minute, if you want
+    staleTime: 1000 * 60,
   });
 }
 
@@ -21,7 +20,16 @@ export function useViewsOverTime(params = {}) {
       const res = await client.get(ANALYTICS.VIEWS, { params });
       return res.data.data;
     },
-    // optional:
-    // keepPreviousData: true, // if this is paginated / filter-changing
+  });
+}
+
+export function useAnalyticsSummary() {
+  return useQuery({
+    queryKey: ['analytics:summary'],
+    queryFn: async () => {
+      const res = await client.get(ANALYTICS.SUMMARY);
+      return res.data.data;
+    },
+    staleTime: 1000 * 60 * 5,
   });
 }

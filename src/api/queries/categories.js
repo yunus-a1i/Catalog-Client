@@ -1,4 +1,3 @@
-// src/api/queries/categories.js
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import client from '../client';
 import { CATEGORIES } from '../endpoints';
@@ -52,6 +51,7 @@ export function useCreateCategory() {
     mutationFn: (payload) => client.post(CATEGORIES.ADMIN, payload),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['admin', 'categories'] });
+      qc.invalidateQueries({ queryKey: ['categories'] });
     },
   });
 }
@@ -64,6 +64,7 @@ export function useUpdateCategory() {
       client.put(CATEGORIES.ADMIN_BY_ID(id), payload),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['admin', 'categories'] });
+      qc.invalidateQueries({ queryKey: ['categories'] });
     },
   });
 }
@@ -75,6 +76,7 @@ export function useDeleteCategory() {
     mutationFn: (id) => client.delete(CATEGORIES.ADMIN_BY_ID(id)),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['admin', 'categories'] });
+      qc.invalidateQueries({ queryKey: ['categories'] });
     },
   });
 }

@@ -1,4 +1,3 @@
-// src/api/queries/products.js
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import client from '../client';
 import { PRODUCTS } from '../endpoints';
@@ -35,7 +34,6 @@ export function useProductQuery(idOrSlug) {
 
 export const fetchAdminProducts = async (params = {}) => {
   const res = await client.get(PRODUCTS.ADMIN, { params });
-  console.log(res.data.data)
   return res.data;
 };
 
@@ -51,10 +49,10 @@ export function useCreateProduct() {
   const qc = useQueryClient();
 
   return useMutation({
-    mutationFn: (payload) =>
-      client.post(PRODUCTS.ADMIN_CREATE, payload),
+    mutationFn: (payload) => client.post(PRODUCTS.ADMIN_CREATE, payload),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['admin', 'products'] });
+      qc.invalidateQueries({ queryKey: ['products'] });
     },
   });
 }
@@ -67,9 +65,8 @@ export function useUpdateProduct() {
       client.put(PRODUCTS.ADMIN_BY_ID(id), payload),
     onSuccess: (_, variables) => {
       qc.invalidateQueries({ queryKey: ['admin', 'products'] });
-      qc.invalidateQueries({
-        queryKey: ['product', variables.id],
-      });
+      qc.invalidateQueries({ queryKey: ['products'] });
+      qc.invalidateQueries({ queryKey: ['product', variables.id] });
     },
   });
 }
@@ -78,10 +75,10 @@ export function useDeleteProduct() {
   const qc = useQueryClient();
 
   return useMutation({
-    mutationFn: (id) =>
-      client.delete(PRODUCTS.ADMIN_BY_ID(id)),
+    mutationFn: (id) => client.delete(PRODUCTS.ADMIN_BY_ID(id)),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['admin', 'products'] });
+      qc.invalidateQueries({ queryKey: ['products'] });
     },
   });
 }
