@@ -19,9 +19,9 @@ import ProductCreate from "./pages/admin/products/ProductCreate";
 import CategoryEdit from "./pages/admin/categories/CategoryEdit";
 import CategoryCreate from "./pages/admin/categories/CategoryCreate";
 // Auth
-import OAuthCallback from "./auth/OAuthCallback";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import OAuthCallback from "./auth/oauthCallback";
 
 function App() {
   const { theme } = useSelector((state) => state.theme);
