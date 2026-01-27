@@ -46,7 +46,7 @@ export default function ProductCard({ product, index = 0 }) {
             'group-hover:border-border-DEFAULT dark:group-hover:border-dark-border-DEFAULT'
           )}
         >
-          <img
+          {product.images?.length && <img
             src={product.images?.[0].url || product.image || '/placeholder.jpg'}
             alt={product.name}
             className={cn(
@@ -54,7 +54,7 @@ export default function ProductCard({ product, index = 0 }) {
               'transition-transform duration-500 ease-smooth',
               'group-hover:scale-105'
             )}
-          />
+          />}
 
           {/* Quick Actions */}
           <div
