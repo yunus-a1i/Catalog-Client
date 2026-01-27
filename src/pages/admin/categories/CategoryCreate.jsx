@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
-import { ArrowLeft, Upload, X } from 'lucide-react';
-import { useAdminCategoriesQuery, useCreateCategory } from '../../../api/queries/categories';
-
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import { ArrowLeft, Upload, X } from "lucide-react";
+import {
+  useAdminCategoriesQuery,
+  useCreateCategory,
+} from "../../../api/queries/categories";
 
 export default function CategoryCreate() {
   const navigate = useNavigate();
@@ -10,14 +12,14 @@ export default function CategoryCreate() {
   const { data: categoriesData } = useAdminCategoriesQuery();
 
   const [formData, setFormData] = useState({
-    name: '',
-    slug: '',
-    description: '',
-    parent: '',
+    name: "",
+    slug: "",
+    description: "",
+    parent: "",
   });
 
   const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState('');
+  const [preview, setPreview] = useState("");
 
   const categories = categoriesData?.data || [];
 
@@ -37,7 +39,7 @@ export default function CategoryCreate() {
   const removeImage = () => {
     setImage(null);
     if (preview) URL.revokeObjectURL(preview);
-    setPreview('');
+    setPreview("");
   };
 
   const handleSubmit = async (e) => {
@@ -58,12 +60,13 @@ export default function CategoryCreate() {
       alert('Failed to create category: ' + (error.response?.data?.message || error.message));
     }
   };
+  
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center space-x-4">
         <button
-          onClick={() => navigate('/admin/categories')}
+          onClick={() => navigate("/admin/categories")}
           className="p-2 hover:bg-gray-100 rounded-lg"
         >
           <ArrowLeft className="w-6 h-6" />
@@ -183,7 +186,7 @@ export default function CategoryCreate() {
         <div className="flex items-center justify-end space-x-4">
           <button
             type="button"
-            onClick={() => navigate('/admin/categories')}
+            onClick={() => navigate("/admin/categories")}
             className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
           >
             Cancel
@@ -193,7 +196,7 @@ export default function CategoryCreate() {
             disabled={createMutation.isLoading}
             className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
           >
-            {createMutation.isLoading ? 'Creating...' : 'Create Category'}
+            {createMutation.isLoading ? "Creating..." : "Create Category"}
           </button>
         </div>
       </form>

@@ -22,7 +22,8 @@ export default function ProductCreate() {
   const [images, setImages] = useState([]);
   const [specs, setSpecs] = useState([{ key: '', value: '' }]);
 
-  const categories = categoriesData?.data || [];
+  const categories = categoriesData?.data || categoriesData || [];
+
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
