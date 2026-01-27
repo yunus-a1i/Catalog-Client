@@ -1,8 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body::-webkit-scrollbar,
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+@layer base {
+  * {
+    @apply antialiased;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-surface-primary text-text-primary font-sans;
+    @apply dark:bg-dark-surface-primary dark:text-dark-text-primary;
+  }
+  
+  ::selection {
+    @apply bg-zinc-900 text-white;
+    @apply dark:bg-zinc-100 dark:text-zinc-900;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-300 rounded-full;
+    @apply dark:bg-zinc-700;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-400;
+    @apply dark:bg-zinc-600;
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2;
+    @apply dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900;
+  }
+  
+  .transition-base {
+    @apply transition-all duration-200 ease-smooth;
+  }
+  
+  .hover-lift {
+    @apply transition-base hover:-translate-y-0.5 hover:shadow-soft;
+  }
+  
+  .hover-scale {
+    @apply transition-base hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .gradient-mask {
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

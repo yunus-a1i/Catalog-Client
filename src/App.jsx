@@ -1,54 +1,53 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import OAuthCallback from "./auth/oauthCallback";
-import LoginPage from "./features/LoginPage";
-import RegisterPage from "./features/RegisterPage";
-import ContactSection from "./sections/ContactSection";
-import CraftsmanshipSection from "./sections/CraftsmanshipSection";
-import Footer from "./sections/Footer";
-import Header from "./sections/Header";
-import TestimonialsSection from "./sections/TestimonialsSection";
-import TopProductsSection from "./sections/TopProductsSections";
-import CategoriesSection from "./sections/CategoriesSection";
-import Home from "./page/Home";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import ProductDetailPage from "./pages/ProductDetail";
+import Categories from "./pages/Categories";
+import CategoryProducts from "./pages/CategoryProducts";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
-import AdminLayout from "./page/admin/AdminLayout";
-import Dashboard from "./page/admin/Dashboard";
-import ProductList from "./page/admin/products/ProductList";
-import CategoryList from "./page/admin/categories/CategoryList";
-import Analytics from "./page/admin/analytics/Analytics";
-import ProductEdit from "./page/admin/products/ProductEdit";
-import ProductCreate from "./page/admin/products/ProductCreate";
-import CategoryEdit from "./page/admin/categories/CategoryEdit";
-import CategoryCreate from "./page/admin/categories/CategoryCreate";
-import ProductDetail from "./page/products/ProductDetail";
+import AdminLayout from "./pages/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import ProductList from "./pages/admin/products/ProductList";
+import CategoryList from "./pages/admin/categories/CategoryList";
+import Analytics from "./pages/admin/analytics/Analytics";
+import ProductEdit from "./pages/admin/products/ProductEdit";
+import ProductCreate from "./pages/admin/products/ProductCreate";
+import CategoryEdit from "./pages/admin/categories/CategoryEdit";
+import CategoryCreate from "./pages/admin/categories/CategoryCreate";
+// Auth
+import OAuthCallback from "./auth/OAuthCallback";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function App() {
+  const { theme } = useSelector((state) => state.theme);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
   return (
-    <>
-      {/* <Header />
-      <Hero />
-      <TopProductsSection />
-      <CraftsmanshipSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer /> */}
-      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/categories" element={<CategoriesSection />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
+          {/* Public Routes */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="products" element={<Products />} />
+            <Route path="products/:slug" element={<ProductDetailPage />} />
+            <Route path="categories" element={<Categories />} />
+            <Route path="categories/:slug" element={<CategoryProducts />} />
+          </Route>
 
-          {/* auth */}
-          <Route path="/login" element={<LoginPage />} />
+          {/* Auth Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/oauth-callback" element={<OAuthCallback />} />
-
-          {/* admin protected route example */}
-          {/* <Route path="/admin/products" element={
-            <ProtectedRoute requireAdmin={true}>
-              <AdminProductsPage />
-            </ProtectedRoute>
-          } /> */}
 
           <Route
             path="/admin"
@@ -71,9 +70,8 @@ function App() {
 
             <Route path="analytics" element={<Analytics />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </>
   );
 }
 
