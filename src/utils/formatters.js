@@ -1,19 +1,37 @@
-export const formatPrice = (price) => {
-  return new Intl.NumberFormat('en-IN', {
+export function formatPrice(price, currency = 'USD') {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'INR',
+    currency,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
   }).format(price);
-};
+}
 
-export const formatDate = (date) => {
-  return new Intl.DateTimeFormat('en-IN', {
+export function formatDate(date, options = {}) {
+  return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    ...options,
   }).format(new Date(date));
-};
+}
 
-export const truncateText = (text, maxLength = 50) => {
-  if (!text) return '';
-  return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
-};
+export function formatNumber(num) {
+  return new Intl.NumberFormat('en-US').format(num);
+}
+
+export function truncate(str, length = 100) {
+  if (!str) return '';
+  if (str.length <= length) return str;
+  return str.slice(0, length).trim() + '...';
+}
+
+export function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-');
+}
