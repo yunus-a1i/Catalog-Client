@@ -124,7 +124,7 @@ export default function Header() {
             </button>
 
             {/* Cart */}
-            <button
+            {/* <button
               onClick={() => dispatch(openCart())}
               className={cn(
                 'relative p-2.5 rounded-full',
@@ -150,7 +150,7 @@ export default function Header() {
                   {cartCount > 99 ? '99+' : cartCount}
                 </span>
               )}
-            </button>
+            </button> */}
 
             {/* User Menu */}
             {user?.data ? (
