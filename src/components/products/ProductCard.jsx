@@ -65,7 +65,7 @@ export default function ProductCard({ product, index = 0 }) {
               'transition-opacity duration-300'
             )}
           >
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -98,7 +98,7 @@ export default function ProductCard({ product, index = 0 }) {
               >
                 <Heart className="w-4 h-4" />
               </motion.button>
-            </div>
+            </div> */}
           </div>
 
           {/* Badges */}
