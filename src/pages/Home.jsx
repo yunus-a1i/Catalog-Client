@@ -1,20 +1,21 @@
-import { Link } from 'react-router';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Truck, Shield } from 'lucide-react';
-import { cn } from '../utils/cn';
-import Button from '../components/common/Button';
-import FeaturedProducts from '../components/products/FeaturedProducts';
-import CategoryList from '../components/categories/CategoryList';
-import { useCategoriesQuery } from '../api/queries/categories';
+import { Link } from "react-router";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, Truck, Shield } from "lucide-react";
+import { cn } from "../utils/cn";
+import Button from "../components/common/Button";
+import FeaturedProducts from "../components/products/FeaturedProducts";
+import CategoryList from "../components/categories/CategoryList";
+import { useCategoriesQuery } from "../api/queries/categories";
 
 export default function Home() {
-  const { data: categories, isLoading: categoriesLoading } = useCategoriesQuery();
+  const { data: categories, isLoading: categoriesLoading } =
+    useCategoriesQuery();
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <section className="relative overflow-hidden bg-[url('/hero.png')] bg-cover bg-right">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 ">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -23,10 +24,10 @@ export default function Home() {
             >
               <span
                 className={cn(
-                  'inline-flex items-center gap-2 px-4 py-2 rounded-full',
-                  'bg-zinc-100 dark:bg-zinc-800',
-                  'text-sm font-medium text-text-secondary dark:text-dark-text-secondary',
-                  'mb-6'
+                  "inline-flex items-center gap-2 px-4 py-2 rounded-full",
+                  "bg-zinc-100",
+                  "text-sm font-medium text-text-secondary",
+                  "mb-6",
                 )}
               >
                 <Sparkles className="w-4 h-4" />
@@ -39,14 +40,14 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className={cn(
-                'text-4xl sm:text-5xl lg:text-6xl font-bold',
-                'text-text-primary dark:text-dark-text-primary',
-                'leading-tight tracking-tight'
+                "text-4xl sm:text-5xl lg:text-6xl font-bold",
+                "text-dark-text-primary",
+                "leading-tight tracking-tight",
               )}
             >
               Discover unique
               <br />
-              <span className="text-text-tertiary dark:text-dark-text-tertiary">
+              <span className="text-neutral-300 ">
                 handcrafted treasures
               </span>
             </motion.h1>
@@ -56,13 +57,13 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className={cn(
-                'mt-6 text-lg',
-                'text-text-secondary dark:text-dark-text-secondary',
-                'max-w-xl'
+                "mt-6 text-lg",
+                "text-dark-text-secondary",
+                "max-w-xl",
               )}
             >
-              Explore our curated collection of artisan products from independent
-              creators around the world. Every piece tells a story.
+              Explore our curated collection of artisan products from
+              independent creators around the world. Every piece tells a story.
             </motion.p>
 
             <motion.div
@@ -72,12 +73,16 @@ export default function Home() {
               className="mt-8 flex flex-wrap gap-4"
             >
               <Link to="/products">
-                <Button size="lg" rightIcon={<ArrowRight className="w-5 h-5" />}>
+                <Button
+                className="dark:bg-[#000000] dark:text-white hover:dark:bg-zinc-900"
+                  size="lg"
+                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                >
                   Shop Now
                 </Button>
               </Link>
               <Link to="/categories">
-                <Button variant="outline" size="lg">
+                <Button size="lg" className="bg-white text-dark hover:bg-zinc-100">
                   Browse Categories
                 </Button>
               </Link>
@@ -88,10 +93,10 @@ export default function Home() {
         {/* Background decoration */}
         <div
           className={cn(
-            'absolute top-0 right-0 w-1/2 h-full',
-            'bg-gradient-to-l from-zinc-100 dark:from-zinc-900 to-transparent',
-            'pointer-events-none',
-            '-z-10'
+            "absolute top-0 right-0 w-1/2 h-full",
+            "bg-gradient-to-l from-zinc-100 dark:from-zinc-900 to-transparent",
+            "pointer-events-none",
+            "-z-10",
           )}
         />
       </section>
@@ -103,18 +108,18 @@ export default function Home() {
             {[
               {
                 icon: Truck,
-                title: 'Free Shipping',
-                description: 'On orders over $100',
+                title: "Global Collection",
+                description: "Sourced from renowned equestrian brands",
               },
               {
                 icon: Shield,
-                title: 'Secure Payment',
-                description: '100% secure checkout',
+                title: "Premium Materials",
+                description: "Leather, textiles, and finishes that last",
               },
               {
                 icon: Sparkles,
-                title: 'Handcrafted',
-                description: 'By independent artists',
+                title: "Refined Aesthetics",
+                description: "Elegance inspired by equestrian heritage",
               },
             ].map((feature, index) => (
               <motion.div
@@ -127,8 +132,8 @@ export default function Home() {
               >
                 <div
                   className={cn(
-                    'p-3 rounded-xl',
-                    'bg-zinc-100 dark:bg-zinc-800'
+                    "p-3 rounded-xl",
+                    "bg-zinc-100 dark:bg-zinc-800",
                   )}
                 >
                   <feature.icon className="w-6 h-6 text-text-primary dark:text-dark-text-primary" />
@@ -184,10 +189,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={cn(
-              'relative overflow-hidden rounded-3xl',
-              'bg-zinc-900 dark:bg-zinc-100',
-              'px-8 py-16 lg:px-16 lg:py-24',
-              'text-center'
+              "relative overflow-hidden rounded-3xl",
+              "bg-zinc-900 dark:bg-zinc-100",
+              "px-8 py-16 lg:px-16 lg:py-24",
+              "text-center",
             )}
           >
             <motion.div
@@ -198,18 +203,18 @@ export default function Home() {
             >
               <h2
                 className={cn(
-                  'text-3xl lg:text-4xl font-bold',
-                  'text-white dark:text-zinc-900',
-                  'max-w-2xl mx-auto'
+                  "text-3xl lg:text-4xl font-bold",
+                  "text-white dark:text-zinc-900",
+                  "max-w-2xl mx-auto",
                 )}
               >
                 Join our community of makers and collectors
               </h2>
               <p
                 className={cn(
-                  'mt-4 text-lg',
-                  'text-zinc-400 dark:text-zinc-600',
-                  'max-w-xl mx-auto'
+                  "mt-4 text-lg",
+                  "text-zinc-400 dark:text-zinc-600",
+                  "max-w-xl mx-auto",
                 )}
               >
                 Get exclusive access to new arrivals, special offers, and
@@ -220,20 +225,20 @@ export default function Home() {
                   type="email"
                   placeholder="Enter your email"
                   className={cn(
-                    'w-full sm:w-80 h-12 px-5',
-                    'bg-white/10 dark:bg-zinc-900/10',
-                    'border border-white/20 dark:border-zinc-900/20',
-                    'rounded-full',
-                    'text-white dark:text-zinc-900',
-                    'placeholder:text-zinc-400 dark:placeholder:text-zinc-600',
-                    'focus:outline-none focus:ring-2 focus:ring-white/50 dark:focus:ring-zinc-900/50'
+                    "w-full sm:w-80 h-12 px-5",
+                    "bg-white/10 dark:bg-zinc-900/10",
+                    "border border-white/20 dark:border-zinc-900/20",
+                    "rounded-full",
+                    "text-white dark:text-zinc-900",
+                    "placeholder:text-zinc-400 dark:placeholder:text-zinc-600",
+                    "focus:outline-none focus:ring-2 focus:ring-white/50 dark:focus:ring-zinc-900/50",
                   )}
                 />
                 <Button
                   size="lg"
                   className={cn(
-                    'bg-white text-zinc-900 hover:bg-zinc-100',
-                    'dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800'
+                    "bg-white text-zinc-900 hover:bg-zinc-100",
+                    "dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800",
                   )}
                 >
                   Subscribe
