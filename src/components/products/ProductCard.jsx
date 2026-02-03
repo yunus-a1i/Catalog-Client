@@ -10,21 +10,21 @@ import { toast } from 'react-toastify';
 export default function ProductCard({ product, index = 0 }) {
   const dispatch = useDispatch();
 
-  const handleAddToCart = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    dispatch(
-      addItem({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.images?.[0] || product.image,
-        quantity: 1,
-      })
-    );
-    toast.success('Added to cart');
-    dispatch(openCart());
-  };
+  // const handleAddToCart = (e) => {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   dispatch(
+  //     addItem({
+  //       id: product.id,
+  //       name: product.name,
+  //       price: product.price,
+  //       image: product.images?.[0] || product.image,
+  //       quantity: 1,
+  //     })
+  //   );
+  //   toast.success('Added to cart');
+  //   dispatch(openCart());
+  // };
 
   return (
     <motion.div
