@@ -105,7 +105,7 @@ export default function ProductDetail({ product }) {
         )}
 
         {/* Quantity */}
-        <div className="space-y-3">
+        {/* <div className="space-y-3">
           <label className="text-sm font-medium text-text-primary dark:text-dark-text-primary">
             Quantity
           </label>
@@ -146,10 +146,10 @@ export default function ProductDetail({ product }) {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Actions */}
-        <div className="flex gap-3">
+        {/* <div className="flex gap-3">
           <Button
             size="lg"
             className="flex-1"
@@ -164,10 +164,10 @@ export default function ProductDetail({ product }) {
           <Button size="lg" variant="outline">
             <Share2 className="w-5 h-5" />
           </Button>
-        </div>
+        </div> */}
 
         {/* Shipping Info */}
-        <div
+        {/* <div
           className={cn(
             'p-4 rounded-xl',
             'bg-surface-tertiary dark:bg-dark-surface-tertiary',
@@ -185,7 +185,7 @@ export default function ProductDetail({ product }) {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Details */}
         {product.details && (
