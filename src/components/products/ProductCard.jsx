@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { Heart, ShoppingBag } from 'lucide-react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { cn } from '../../utils/cn';
 import { formatPrice } from '../../utils/formatters';
 // import { addItem, openCart } from '../../store/cartSlice';
