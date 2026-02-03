@@ -4,11 +4,11 @@ import { Heart, ShoppingBag } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { cn } from '../../utils/cn';
 import { formatPrice } from '../../utils/formatters';
-import { addItem, openCart } from '../../store/cartSlice';
-import { toast } from 'react-toastify';
+// import { addItem, openCart } from '../../store/cartSlice';
+// import { toast } from 'react-toastify';
 
 export default function ProductCard({ product, index = 0 }) {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // const handleAddToCart = (e) => {
   //   e.preventDefault();
